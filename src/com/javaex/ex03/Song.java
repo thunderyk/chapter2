@@ -9,6 +9,10 @@ public class Song {
 	private int year;
 	private String track;
 	
+	public Song() {
+		
+	}
+	
 	public Song(String artist, String title, String album, int year, String track, String composer) {
 		this.artist = artist;
 		this.title = title;
