@@ -4,16 +4,16 @@ public class TV {
 
 	private int channel= 0;
 	private int volume= 0;
-	private boolean on = false;
+	private boolean power = false;
 	
-	public TV(int channel, int volume, boolean on) {
+	public TV(int channel, int volume, boolean power) {
 		this.channel = channel;
 		this.volume = volume;
-		this.on = on;
+		this.power = power;
 	}
 	
-	public void power(boolean on) {
-		this.on = on;
+	public void power(boolean power) {
+		this.power = power;
 	}
 	
 	public void channel(int channel) {
@@ -53,12 +53,13 @@ public class TV {
 	}
 	
 	public void status() {
-		if(this.on) {
+		if(this.power) {
 			System.out.println("TV가 켜져있습니다.");
 			System.out.println("채널: "+this.channel+" 볼륨: "+this.volume);
 		}else {
 			System.out.println("TV가 꺼져있습니다.");
 		}
+		System.out.println();
 	}
 
 	public int getChannel() {
@@ -70,6 +71,6 @@ public class TV {
 	}
 
 	public boolean isOn() {
-		return on;
+		return power;
 	}	
 }
